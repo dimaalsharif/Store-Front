@@ -1,0 +1,61 @@
+.gridview{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-gap: 200px;
+    padding-left: 70px;
+    text-align: center;
+    margin-left: 500px;
+}
+img{
+    height: 500px;
+    width: 400px;
+  border-radius: 0.5cm;  
+  margin-top: 150px;
+}
+.details{
+    margin-top: 200px;
+
+}
+mat-card{
+    height: 350px;
+    width: 350px;
+    padding-top: 30px;
+}
+mat-card-title{
+    font-size: 50px;
+}
+.desc{
+ font-size: 27px;
+ padding-top: 20px;
+}
+.price{
+    font-size: 45px;
+    padding-top: 40px;
+}
+.name{
+    font-size: 45px;
+    padding-top: 10px;
+}
+.details{
+    background-color: silver;
+    border-radius: 30px;
+}
+button,p{
+    margin-top: 15px;
+}
+p{
+    font-size: 20px;
+    text-decoration: underline;
+}
+input{
+    width:100px;
+    height:30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-top:20px
+}

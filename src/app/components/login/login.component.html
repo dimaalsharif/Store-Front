@@ -1,0 +1,23 @@
+<span class="padding-bottom--15">Have an account? Sign In Now!</span>
+<div class="formbg-outer">
+  <div class="formbg">
+    <div class="formbg-inner padding-horizontal--48">
+      <form id="stripe-login">
+        <div class="field padding-bottom--24">
+            <label for="username">Username</label>
+            <input type="text" name="username" [ngModel]="username" (ngModelChange)="username=$event">
+        </div>
+        <div class="field padding-bottom--24">
+            <label for="password">Password</label>
+          <input type="password" name="password" [ngModel]="password" (ngModelChange)="password=$event">
+        </div>
+        </form>
+        <button type="submit" class="btnSubmit" [disabled]="password!.length==0" (click)="login()">Sign In</button>
+    </div>
+  </div>
+  <div class="footer-link padding-top--24">
+    <h4>Dont have an account? <a href="/signup">Sign up now!</a></h4>
+    <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+    </div>
+  </div>
+

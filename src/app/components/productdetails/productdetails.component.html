@@ -1,0 +1,18 @@
+<div class="gridview">
+    <div class="img">
+        <img src={{productObj?.imageurl}} alt="hi" width="270" height="250"/>
+    </div>
+    <div>
+        <mat-card class="details">
+        <mat-card-title class="name">{{productObj?.name}}</mat-card-title>
+        <mat-card-subtitle class="price">${{productObj?.price}}</mat-card-subtitle>
+        <mat-card-subtitle class="desc">{{productObj?.productdesc}}</mat-card-subtitle>
+        <input type="number" min="1" max="700" [ngModel]="productQuantity" (ngModelChange)="productQuantity=$event">
+        <br/>
+        <button>
+            <mat-icon (click)="addItem()">add_shopping_cart</mat-icon>
+        </button>  
+        <p (click)="backToProducts()">Back to the products</p>
+    </mat-card> 
+    </div>
+</div>

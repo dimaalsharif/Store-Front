@@ -1,0 +1,37 @@
+<div>
+    <h1>Hello My frined, {{authUserInfo?.firstname}}</h1>
+</div>
+ 
+
+<mat-drawer-container class="example-container" autosize>
+    <div *ngFor="let p of products" class="gridview" [ngClass]="{'slideOpen': showFiller}">
+        <mat-card>
+            <mat-card-content>
+                <img src={{p.imageurl}} alt="hi" width="270" height="250" (click)="goToDetails(p.id)"/>
+                <mat-card-title class="name">{{p.name}}</mat-card-title> 
+                <mat-card-title class="price">${{p.price}}</mat-card-title> 
+                <input type="number" min="1" max="700" [ngModel]="productQuantity" (ngModelChange)="productQuantity=$event">
+                <br/>
+                <button>
+                    <mat-icon (click)="addItem(p.id)">add_shopping_cart</mat-icon>
+                </button>
+                <button class="remove">
+                    <mat-icon (click)="removeItem(p.id)">remove_shopping_cart</mat-icon>
+                </button>
+            </mat-card-content>
+            <button (click)="navtocheckout()">
+                HI
+            </button>	
+        </mat-card>
+</div>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle() && showFiller = !showFiller">
+        Toggle sidenav
+      </button>
+    </div>
+  
+  </mat-drawer-container>
